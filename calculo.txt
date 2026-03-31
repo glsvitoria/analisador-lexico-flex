@@ -1,0 +1,15 @@
+# Inicio do Programa de Teste
+raio = 25
+pi = 3.14159
+
+area = pi * (raio * raio)
+perimetro = 2 * pi * raio
+
+Se area > 100 entao
+    resultado = area + 10.50
+Senao
+    resultado = 0
+Fim
+
+printf("O resultado final eh: ")
+print(resultado)
