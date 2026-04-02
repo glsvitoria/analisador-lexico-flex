@@ -1,0 +1,23 @@
+// Teste de Comentário de Linha
+/* Teste de Comentário de Bloco 
+   Este trecho deve ser ignorado pelo Flex 
+*/
+
+int main() {
+  float raio = 25.5;
+  float pi = 3.14159;
+  char letra = 'A';
+  char quebra = '\n';
+  
+  string mensagem = "Calculando a area...";
+  string erro_proposital = "Esqueci de fechar esta aspa
+  
+  char erro_char = 'X
+  
+  if (raio > 0) {
+    float area = pi * (raio * raio);
+    return 1;
+  } else {
+    return 0;
+  }
+}

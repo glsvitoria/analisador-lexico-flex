@@ -6,9 +6,9 @@ area = pi * (raio * raio)
 perimetro = 2 * pi * raio
 
 Se area > 100 entao
-    resultado = area + 10.50
+  resultado = area + 10.50
 Senao
-    resultado = 0
+  resultado = 0
 Fim
 
 printf("O resultado final eh: ")

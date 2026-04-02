@@ -1,0 +1,5 @@
+int valido = 1;
+// Erros na proxima linha
+int invalido = 2 @ 3; // O simbolo @ não é válido
+float preco = $50.5;  // O simbolo $ não é válido
+?

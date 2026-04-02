@@ -1,0 +1,19 @@
+// Declaração de uma função de soma
+int soma(int a, int b) {
+    return a + b;
+}
+
+/* Função principal que usa a soma */
+int main() {
+  int valor1 = 100;
+  int valor2 = 250;
+  int total;
+
+  total = soma(valor1, valor2);
+  
+  if (total >= 300) {
+    return 1;
+  } else {
+    return 0;
+  }
+}

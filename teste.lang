@@ -1,0 +1,15 @@
+// Arquivo de teste para o compilador
+int main() {
+  int resultado = 0;
+  float pi = 3.14;
+
+  /* Loop para calculo */
+  while (resultado <= 10) {
+    resultado = resultado + 1;
+  }
+  
+  if (resultado > 10) {
+    // Imprime uma mensagem (função não implementada)
+    printf("Finalizado!");
+  }
+}
