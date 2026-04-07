@@ -52,20 +52,44 @@ Depois aperte Enter e, para ver o resultado final, pressione Ctrl + D.
 
 ### Teste Automático (Via Arquivo)
 
-Se você tiver um arquivo chamado contas.txt, pode usá-lo como entrada:
+Existem 5 arquivos de teste na raiz do repositório, pode usá-lo como entrada:
 
 ```bash
-./meu_analisador < contas.txt
+./meu_analisador < ../arquivo_teste.txt
 ```
 
-## 📌 3. Explicação das Regras (Markdown Table)
+## 📂 3. Desafios no Repositório
 
-Padrão (Regex) e o que ele faz?
+### 3.1. Contador de Texto (contador.l)
+Um analisador básico para estatísticas de texto.
 
-```[0-9]+``` = Reconhece um ou mais dígitos em sequência como um único número.
+O que faz: Conta a quantidade total de palavras, linhas e caracteres.
 
-```[-+*/]``` = Reconhece qualquer um dos quatro operadores matemáticos básicos.
+Padrão: Palavras são reconhecidas como sequências de letras [a-zA-Z]+.
 
-```\n``` e ```[ \t]``` = Captura quebras de linha e espaços para contar como caracteres, mas não faz nada extra.
+### 3.2. Tokenizador de Expressões (tokenizador_exp.l)
+Focado em identificar componentes de fórmulas matemáticas.
 
-```.``` = O ponto é um coringa: captura qualquer símbolo que não caiu nas regras acima.
+O que faz: Distingue números inteiros de operadores aritméticos.
+
+Diferencial: Possui suporte a números decimais (float) para evitar contagens erradas em pontos flutuantes.
+
+### 3.3. Tabela de Símbolos (simbolos.l)
+Introdução ao gerenciamento de identificadores únicos.
+
+O que faz: Reconhece nomes de variáveis (IDs). Se um ID já foi visto, ele retorna o índice existente; se for novo, ele o insere na tabela.
+
+Regra de ID: Começa obrigatoriamente com letra, seguido de letras ou números.
+
+### 3.4. Scanner Completo (scanner.l)
+O nível mais avançado, simulando o front-end de um compilador real para linguagens como C ou Java.
+
+Recursos:
+
+Keywords: if, else, while, int, etc.
+
+Comentários: Suporte a comentários de linha (//) e bloco (/* ... */).
+
+Validação de Literais: Detecta se strings ("...") ou caracteres ('...') foram abertos mas não fechados, reportando o erro e a linha exata.
+
+Tabela de Símbolos Dinâmica: Gerencia identificadores usando strdup e desalocação de memória.
