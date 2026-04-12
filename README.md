@@ -93,3 +93,22 @@ Comentários: Suporte a comentários de linha (//) e bloco (/* ... */).
 Validação de Literais: Detecta se strings ("...") ou caracteres ('...') foram abertos mas não fechados, reportando o erro e a linha exata.
 
 Tabela de Símbolos Dinâmica: Gerencia identificadores usando strdup e desalocação de memória.
+
+Para fechar com chave de ouro a documentação do seu repositório, o Desafio 5 deve destacar justamente essa evolução técnica: a Tokenização Granular (quando deixamos de usar categorias genéricas e passamos a dar um nome único para cada símbolo).
+
+Aqui está o trecho para você adicionar ao seu README.md:
+
+### 3.5. Scanner com Tokenização Granular (scanner_v2.l)
+Este desafio eleva o nível de precisão do analisador léxico, preparando-o para a integração com um Analisador Sintático (Parser).
+
+O que faz: Substitui as categorias genéricas (como T_KEYWORD ou T_OPERATOR) por tokens específicos para cada símbolo da linguagem.
+
+Diferenciais Técnicos:
+
+Tokens Específicos: Implementação de tokens individuais como T_IF, T_OP_SOMA, T_PONTO_VIRGULA, entre outros.
+
+Precedência de Padrões: Lógica de ordenação nas regras do Flex para garantir que operadores compostos (ex: ==) sejam reconhecidos antes de operadores simples (ex: =).
+
+Saída Detalhada: Função main reformulada com switch-case para gerar um log de depuração preciso, identificando cada lexema por sua função gramatical exata.
+
+Robustez: Separação clara entre tipos de dados (Keywords como int) e literais (como T_INTEGER), evitando conflitos de nomes na enumeração.
