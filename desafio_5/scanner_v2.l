@@ -7,51 +7,51 @@
    Cada símbolo possui seu próprio ID único para facilitar a futura análise sintática.
 */
 typedef enum {
-    T_EOF = 0,
-    T_UNKNOWN = 266,
-    T_ERROR_STRING = 267,
-    T_ERROR_CHAR = 269,
+  T_EOF = 0,
+  T_UNKNOWN = 266,
+  T_ERROR_STRING = 267,
+  T_ERROR_CHAR = 269,
 
-    // Identificadores e Literais
-    T_ID = 259,
-    T_INTEGER = 260,
-    T_FLOAT_LITERAL = 261, 
-    T_STRING = 264,
-    T_CHAR_LITERAL = 268,
+  // Identificadores e Literais
+  T_ID = 259,
+  T_INTEGER = 260,
+  T_FLOAT_LITERAL = 261, 
+  T_STRING = 264,
+  T_CHAR_LITERAL = 268,
 
-    // Palavras-Chave (Keywords)
-    T_IF = 270,
-    T_ELSE = 271,
-    T_WHILE = 272,
-    T_INT = 273,
-    T_FLOAT = 274,
-    T_RETURN = 275,
-    T_FOR = 276,
-    T_VOID = 277,
-    T_CHAR = 278,
+  // Palavras-Chave (Keywords)
+  T_IF = 270,
+  T_ELSE = 271,
+  T_WHILE = 272,
+  T_INT = 273,
+  T_FLOAT = 274,
+  T_RETURN = 275,
+  T_FOR = 276,
+  T_VOID = 277,
+  T_CHAR = 278,
 
-    // Operadores
-    T_OP_SOMA = 300,        // +
-    T_OP_SUB = 301,         // -
-    T_OP_MULT = 302,        // *
-    T_OP_DIV = 303,         // /
-    T_OP_ATRIB = 304,       // =
-    T_OP_IGUAL = 305,       // ==
-    T_OP_DIFERENTE = 306,   // !=
-    T_OP_MENOR = 307,       // <
-    T_OP_MAIOR = 308,       // >
-    T_OP_MENOR_IGUAL = 309, // <=
-    T_OP_MAIOR_IGUAL = 310, // >=
-    T_OP_INC = 311,         // ++
-    T_OP_DEC = 312,         // --
+  // Operadores
+  T_OP_SOMA = 300,        // +
+  T_OP_SUB = 301,         // -
+  T_OP_MULT = 302,        // *
+  T_OP_DIV = 303,         // /
+  T_OP_ATRIB = 304,       // =
+  T_OP_IGUAL = 305,       // ==
+  T_OP_DIFERENTE = 306,   // !=
+  T_OP_MENOR = 307,       // <
+  T_OP_MAIOR = 308,       // >
+  T_OP_MENOR_IGUAL = 309, // <=
+  T_OP_MAIOR_IGUAL = 310, // >=
+  T_OP_INC = 311,         // ++
+  T_OP_DEC = 312,         // --
 
-    // Separadores
-    T_PV = 400,             // ;
-    T_VIRGULA = 401,        // ,
-    T_PAREN_ESQ = 402,      // (
-    T_PAREN_DIR = 403,      // )
-    T_CHAVE_ESQ = 404,      // {
-    T_CHAVE_DIR = 405       // }
+  // Separadores
+  T_PV = 400,             // ;
+  T_VIRGULA = 401,        // ,
+  T_PAREN_ESQ = 402,      // (
+  T_PAREN_DIR = 403,      // )
+  T_CHAVE_ESQ = 404,      // {
+  T_CHAVE_DIR = 405       // }
 } TokenType;
 
 int yylval;
